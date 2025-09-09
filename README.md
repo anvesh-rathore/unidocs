@@ -1,4 +1,4 @@
-# 📁 Unidocs
+# 🤖 Unidocs
 
 Unidocs is a web-based real-time file sharing and chat application built using **Node.js**, **Express**, and **Socket.IO**. It allows users to join chat rooms and share files instantly through a server-managed interface.
 
