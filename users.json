@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "user_me0ctkp9f4x0kgr8u",
+      "username": "aditisingh",
+      "createdAt": "2025-08-06T19:21:38.061Z",
+      "lastLogin": "2025-08-07T15:45:49.177Z"
+    },
+    {
+      "id": "user_me0xhu1ojoa5ocmzk",
+      "username": "aditi",
+      "createdAt": "2025-08-07T05:00:22.237Z",
+      "lastLogin": "2025-08-07T15:45:27.594Z"
+    },
+    {
+      "id": "user_me0zvlq6hidyfy56n",
+      "username": "aditya",
+      "createdAt": "2025-08-07T06:07:03.870Z",
+      "lastLogin": "2025-08-07T06:07:03.870Z"
+    },
+    {
+      "id": "user_me1kltdonvl49m7w6",
+      "username": "ishita",
+      "createdAt": "2025-08-07T15:47:19.164Z",
+      "lastLogin": "2025-08-07T15:47:19.164Z"
+    }
+  ],
+  "rooms": {}
+}

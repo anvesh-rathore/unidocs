@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P File Transfer</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background-animation">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+            <div class="floating-shape shape-5"></div>
+        </div>
+
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">🚀</div>
+                <h1>FileShare</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title">
+                        Share Files
+                        <span class="gradient-text">Instantly</span>
+                    </h2>
+                    <p class="hero-subtitle">
+                        Secure peer-to-peer file transfer using cutting-edge WebRTC technology. 
+                        No servers, no limits, just direct connections between devices.
+                    </p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🔒</div>
+                            <h3>Secure</h3>
+                            <p>End-to-end encrypted transfers</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Fast</h3>
+                            <p>Direct peer-to-peer connections</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🌐</div>
+                            <h3>Universal</h3>
+                            <p>Works across all devices</p>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <button class="cta-button" id="loginBtn">
+                            <span>Get Started</span>
+                            <div class="button-glow"></div>
+                        </button>
+                        <p class="cta-text">Join thousands of users sharing files securely</p>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="device-mockup">
+                        <div class="device-screen">
+                            <div class="transfer-animation">
+                                <div class="file-icon">📄</div>
+                                <div class="transfer-line"></div>
+                                <div class="device-icon">💻</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 FileShare. Secure P2P File Transfer.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.floating-shape');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.5;
+                const xOffset = (x - 0.5) * speed * 20;
+                const yOffset = (y - 0.5) * speed * 20;
+                
+                shape.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

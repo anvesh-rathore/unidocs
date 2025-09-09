@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P File Transfer - FileShare</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background Animation -->
+        <div class="background-animation">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">🚀</div>
+                <h1>FileShare</h1>
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">👤</div>
+                <div class="user-details">
+                    <span class="username" id="currentUsername">Loading...</span>
+                    <span class="user-id" id="currentUserId">ID: Loading...</span>
+                </div>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">            
+            <!-- Connection Section -->
+            <div class="connection-section">
+                <div class="connection-card">
+                    <h2>Connect to Peer</h2>
+                    <p>Enter your peer's ID to establish a direct connection</p>
+                    
+                    <div class="connection-form">
+                        <div class="form-group">
+                            <label for="peerIdInput">Peer ID</label>
+                            <input type="text" id="peerIdInput" placeholder="Enter peer ID to connect" />
+                        </div>
+                        <button class="connect-btn" id="connectBtn">
+                            <span>Connect</span>
+                            <div class="button-glow"></div>
+                        </button>
+                    </div>
+                    
+                    <div class="connection-status" id="connectionStatus">
+                        <div class="status-indicator">
+                            <div class="status-dot" id="statusDot"></div>
+                            <span id="statusText">Ready to connect</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File Transfer Section -->
+            <div class="transfer-section">
+                <div class="drop-zone" id="dropZone">
+                    <div class="drop-zone-content">
+                        <div class="drop-icon">📎</div>
+                        <h3>Drop files here or click to select</h3>
+                        <p>Files will be transferred directly to your connected peer</p>
+                        <input type="file" id="fileInput" multiple style="display: none;">
+                        <button class="select-file-btn" id="selectFileBtn">
+                            <span>Select Files</span>
+                            <div class="button-glow"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="file-list" id="fileList"></div>
+            </div>
+
+            <!-- Transfer Log -->
+            <div class="log-section">
+                <div class="log-container">
+                    <div class="log-header">
+                        <h3>Transfer Log</h3>
+                        <button class="clear-log-btn" id="clearLogBtn">Clear</button>
+                    </div>
+                    <div class="log-content" id="logContent">
+                        <div class="log-entry">
+                            <span class="log-time">Ready</span>
+                            <span class="log-message">Waiting for peer connection...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Notifications -->
+        <div class="notifications" id="notifications"></div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+            <div class="loading-text" id="loadingText">Processing...</div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
